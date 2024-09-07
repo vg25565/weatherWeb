@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Weather Web</title>
+</head>
+<body class="bg-gray-100 text-gray-900 min-h-screen flex flex-col">
+    <!-- Header -->
+    <div class="bg-blue-500 h-16">
+        <header class="flex items-center justify-between p-2">
+            <img src="weather.avif" alt="Weather Logo" class="h-12 w-12 rounded-full">
+            <h1 class="text-white text-2xl font-semibold flex-grow text-center">Weather Forecast</h1>
+        </header>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container mx-auto p-6 flex-grow">
+        <main class="bg-white shadow-md rounded-lg p-6">
+            <h2 class="text-xl font-bold mb-4 text-gray-800">Check your city's weather</h2>
+
+            <!-- Search Form -->
+            <form id="weatherForm" class="mb-6">
+                <input type="text" id="cityInput" placeholder="Enter city name" class="border border-gray-300 p-2 rounded-lg w-full mb-4" required>
+                <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-lg">Get Weather</button>
+            </form>
+
+            <!-- Weather Details Display -->
+            <div id="weatherDetails" class="hidden bg-gray-100 p-4 rounded-lg">
+                <h3 class="text-lg font-semibold mb-2" id="cityName"></h3>
+                <p><strong>Temperature:</strong> <span id="temperature"></span>°C</p>
+                <p><strong>Weather:</strong> <span id="description"></span></p>
+                <p><strong>Humidity:</strong> <span id="humidity"></span>%</p>
+                <p><strong>Wind Speed:</strong> <span id="wind"></span> m/s</p>
+            </div>
+
+            <!-- Error Message -->
+            <div id="error" class="hidden text-red-500 font-semibold"></div>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-blue-500 p-4 text-center text-white">
+        <p>&copy; 2024 Weather Web</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+<!-- @vishal -->
